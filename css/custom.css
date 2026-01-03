@@ -1,0 +1,111 @@
+/* 
+ * Fanavar Steel - Custom CSS
+ * Language Switcher Hover Styles and Additional UI Enhancements
+ */
+
+
+/* Language Switcher Hover Styles */
+
+.language-switcher-nav {
+    position: relative;
+}
+
+.language-switcher-nav .nav-item.dropdown {
+    position: static;
+}
+
+.language-switcher-nav .language-toggle {
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.language-switcher-nav .language-toggle:hover {
+    color: var(--primary-color, #e36159) !important;
+}
+
+.language-switcher-nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: auto;
+    min-width: 120px;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 0.875rem;
+    color: #212529;
+    text-align: right;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    z-index: 1000;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175);
+}
+
+
+/* Show dropdown on hover */
+
+.language-switcher-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.language-switcher-nav .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.language-switcher-nav .dropdown-item:hover,
+.language-switcher-nav .dropdown-item:focus {
+    color: #16181b;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+
+.language-switcher-nav .dropdown-item.active,
+.language-switcher-nav .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: var(--primary-color, #e36159);
+}
+
+
+/* Dropdown animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Ensure the dropdown toggle shows pointer cursor */
+
+.language-switcher-nav .language-toggle::after {
+    display: none !important;
+}
+
+
+/* Mobile adjustments for language switcher */
+
+@media (max-width: 991px) {
+    .language-switcher-nav {
+        display: none !important;
+    }
+}

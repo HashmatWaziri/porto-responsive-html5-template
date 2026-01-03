@@ -1,0 +1,27 @@
+# Exclude video files
+video/
+
+# Exclude large media files
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.ogg
+
+# Exclude node_modules if present
+node_modules/
+
+# Exclude build outputs
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
